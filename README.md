@@ -1,1 +1,1 @@
-# Capstone-project-2
+A personal portfolio project showcasing my growth from a coding beginner to a fullstack enthusiast. Built with HTML and CSS, this site features a creative landscape design with mountains, lakes, and clouds, reflecting my path in web development. Inspired by the App Brewery Capstone example, it’s a responsive and visually engaging way to display my skills and progress.
