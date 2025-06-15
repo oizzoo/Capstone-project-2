@@ -5,6 +5,24 @@ body {
     padding: 0;
 }
 
+.gradient-separator {
+  width: 80%;
+  height: 4px;
+  margin: 40px auto;
+  background: linear-gradient(
+    300deg,
+    rgba(42, 160, 54, 0.8),
+    rgba(108, 169, 31, 0.8),
+    rgba(179, 179, 0, 0.8),
+    rgba(23, 102, 179, 0.8)
+  );
+  border-radius: 3px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
 /* MAIN TOP SECTION section */
 .Top-container {
     display: grid;
@@ -59,6 +77,7 @@ h1 {
     min-width: 0;
 }
 
+
 /* ABOUT ME section */
 
 .About-me-container {
@@ -83,6 +102,7 @@ h1 {
     max-height: 200px;
     border-radius: 50%;
     margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .About-me-container > h2 {
@@ -102,24 +122,66 @@ h1 {
 /* MIDDLE section */
 
 .Middle-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 20px;
-    padding: 20px;
-    margin-top: 30px;
-    font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px;
+  margin: 30px auto 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.Middle-container > div.section-row {
+  background: rgba(255, 255, 255, 0.1); /* lekki kontrast */
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  display: grid;
+  grid-template-columns: 50px 1fr; /* ikona + tekst */
+  align-items: center;
+  column-gap: 15px;
+}
+
+.section-icon img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.section-content {
+  text-align: right; /* tekst wyrównany do prawej */
+}
+
+.section-content h3 {
+  color: #2192ff;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.section-content p {
+  margin: 4px 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.Middle-container a {
+  color: #38e54d; /* zielony z gradientu */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.Middle-container a:hover {
+  text-decoration: underline;
 }
 
 .Header-section-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    font-family: "Roboto", sans-serif;
-    color: #2192ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #2192ff;
 }
-
 
 /* Website scaling */
 
@@ -144,15 +206,19 @@ h1 {
     .About-me-container > p {
         font-size: 1rem;
     }
-
     .profile-pic {
     max-width: 100px;
     max-height: 100px;
-}
-
+    }
     .Middle-container{
         grid-template-columns: 1fr;
         align-items: start;
         justify-content: flex-start;
+    }
+    .Middle-container > div {
+        padding: 12px 15px;
+    }
+    .Middle-container p {
+        font-size: 1rem;
     }
 }
