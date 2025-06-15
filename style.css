@@ -304,7 +304,6 @@ h1 {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  border: 2px solid #38e54d;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
