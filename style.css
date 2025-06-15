@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-
+/* MAIN TOP SECTION section */
 .Top-container {
     display: grid;
     justify-items: center;
@@ -13,7 +13,6 @@ body {
     column-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-
 }
 
 .gradient-background {
@@ -37,6 +36,7 @@ h1 {
     border: solid;
     border-radius: 20%;
     max-width: fit-content;
+    color: #2192ff;
 }
 
 .para {
@@ -45,19 +45,83 @@ h1 {
     grid-row-start: 3;
     order: 1;
     margin-top: 10px;
-    align-self: baseline;
+    align-self: flex-start;
 }
 
 .lake {
     width: 100%;
-    min-width: 600px;
     max-width: 100%;
     margin-bottom: 0px;
     border-radius: 5%;
     align-self: end;
     grid-column-start: 2;
     grid-row-start: 3;
+    min-width: 0;
 }
+
+/* ABOUT ME section */
+
+.About-me-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 50px;
+    justify-items: center; 
+    align-items: center;
+}
+
+.center-picture {
+    grid-row-start: 1;
+    justify-self: center;
+    align-self: start;
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.About-me-container > h2 {
+    grid-row-start: 2;
+    font-size: 3rem;
+    color: #2192ff;
+}
+
+.About-me-container > p {
+    grid-row-start: 3;
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* MIDDLE section */
+
+.Middle-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif;
+}
+
+.Header-section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif;
+    color: #2192ff;
+}
+
+
+/* Website scaling */
 
 @media (max-width: 600px) {
     .Top-container {
@@ -67,9 +131,28 @@ h1 {
         font-size: 1.5rem;
     }
     .para {
-        font-size: 12px;
+        font-size: 14px;
     }
     .lake {
-        min-width: 200px;
+        min-width: 0;
+    }
+    
+    .About-me-container > h2 {
+        font-size: 2rem;
+    }
+
+    .About-me-container > p {
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+    .Middle-container{
+        grid-template-columns: 1fr;
+        align-items: start;
+        justify-content: flex-start;
     }
 }
