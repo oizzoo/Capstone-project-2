@@ -5,6 +5,7 @@ body {
     padding: 0;
 }
 
+/* Gradient separator line */
 .gradient-separator {
   width: 80%;
   height: 4px;
@@ -18,12 +19,8 @@ body {
   );
   border-radius: 3px;
 }
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
 
-/* MAIN TOP SECTION section */
+/* MAIN TOP SECTION*/
 .Top-container {
     display: grid;
     justify-items: center;
@@ -39,7 +36,6 @@ body {
   min-width: 100%;
   width: 100%;
 }
-
 
 .limelight-regular {
   font-family: "Limelight", sans-serif;
@@ -79,7 +75,6 @@ h1 {
 
 
 /* ABOUT ME section */
-
 .About-me-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -119,37 +114,48 @@ h1 {
     margin: 0 auto;
 }
 
-/* MIDDLE section */
 
+/* MIDDLE section */
 .Middle-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 600px;
+  gap: 50px;
+  max-width: 1200px;
   margin: 30px auto 0;
   font-family: "Roboto", sans-serif;
 }
 
 .Middle-container > div.section-row {
-  background: rgba(255, 255, 255, 0.1); /* lekki kontrast */
+  background: rgba(255, 255, 255, 0.1); 
   padding: 15px 20px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 
   display: grid;
-  grid-template-columns: 50px 1fr; /* ikona + tekst */
+  grid-template-columns: 90px 1fr; 
   align-items: center;
-  column-gap: 15px;
+  column-gap: 90px;
 }
 
 .section-icon img {
-  width: 40px;
-  height: 40px;
+  width: 120px;  
+  height: auto;  
   display: block;
 }
 
+.learning-gif {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+
 .section-content {
-  text-align: right; /* tekst wyrównany do prawej */
+  text-align: left; 
+  max-width: 100%; 
+  word-wrap: break-word; 
+  line-height: 1.5; 
+  padding-right: 10px; 
 }
 
 .section-content h3 {
@@ -162,10 +168,11 @@ h1 {
   margin: 4px 0;
   font-size: 1.1rem;
   line-height: 1.4;
+  margin-bottom: 12px;
 }
 
 .Middle-container a {
-  color: #38e54d; /* zielony z gradientu */
+  color: #38e54d; 
   text-decoration: none;
   font-weight: 500;
 }
@@ -183,8 +190,8 @@ h1 {
   color: #2192ff;
 }
 
-/* Website scaling */
 
+/* Website scaling */
 @media (max-width: 600px) {
     .Top-container {
         grid-template-columns: 1fr;
@@ -221,4 +228,11 @@ h1 {
     .Middle-container p {
         font-size: 1rem;
     }
+    .Middle-container > div.section-row {
+    grid-template-columns: 40px 1fr;
+  }
+  .section-icon img {
+    width: 80px;
+    height: auto;
+  }
 }
