@@ -271,7 +271,55 @@ h1 {
   text-decoration: underline;
 }
 
+/* CONTACT ME section */
 
+.contact-section {
+  max-width: 600px;
+  margin: 0;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #eee;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #2192ff;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  color: #38e54d;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid #38e54d;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  background-color: #38e54d;
+  color: #121212;
+  outline: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
 
 /* Website scaling */
 @media (max-width: 600px) {
@@ -323,4 +371,8 @@ h1 {
         gap: 30px 0;
         justify-content: center;
     }
+    .contact-links {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
