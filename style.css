@@ -274,12 +274,11 @@ h1 {
 /* CONTACT ME section */
 
 .contact-section {
-  max-width: 600px;
-  margin: 0;
-  padding: 0px;
-  font-family: "Roboto", sans-serif;
-  color: #eee;
-  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-section h2 {
