@@ -165,10 +165,9 @@ h1 {
 }
 
 .section-content p {
-  margin: 4px 0;
+  margin: 0 0 12px 0;
   font-size: 1.1rem;
   line-height: 1.4;
-  margin-bottom: 12px;
 }
 
 .Middle-container a {
